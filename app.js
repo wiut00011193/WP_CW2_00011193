@@ -1,11 +1,15 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.port || 3000
+
+app.set('view engine', 'pug')
+
+app.use('/static', express.static('public'))
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.render('index')
 })
 
-app.listen(port, () => {
-    console.log(`Ready on port ${port}`)
-})
+app.listen(PORT, () => {
+    console.log(`Ready on port ${PORT}`) })
