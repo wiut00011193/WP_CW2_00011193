@@ -75,3 +75,13 @@ hr {
     border-color: white;
     
 }
+
+.error_msg {
+    color: crimson;
+    font-size: 1rem;
+}
+
+.success_msg {
+    color: lightseagreen;
+    font-size: 1rem;
+}

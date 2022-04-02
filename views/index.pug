@@ -1,4 +1,7 @@
 extends layout.pug
 
 block content
-    h3 All Tasks
+    if success_msg
+        p.success_msg Task has been successfully #{ success_msg }!
+
+    h2 All Tasks

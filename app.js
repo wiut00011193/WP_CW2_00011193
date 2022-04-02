@@ -1,23 +1,19 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const fs = require('fs')
+
+const index = require('./routes/index')
+const create = require('./routes/create')
 
 const PORT = process.env.port || 3000
-const dbPath = path.join(__dirname, 'database/tasks.json')
 
 app.set('view engine', 'pug')
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
-
-app.get('/create', (req, res) => {
-    res.render('create')
-})
+app.use('/', index)
+app.use('/create', create)
 
 app.get('/update', (req, res) => {
     res.render('update')

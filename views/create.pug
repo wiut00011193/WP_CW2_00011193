@@ -3,7 +3,10 @@ extends layout.pug
 block content
     h2 Create a Task
 
-    form(action="/create-task" method="POST")
+    form(action="/create" method="POST")
             input.input(type="text" name="taskName" placeholder="Task Name")
             textarea.input(name="taskDesc", cols="30", rows="10" placeholder="Task Description")
             button.input.btn Create
+
+    if received == 'no'
+        p.error_msg Please fill out all the forms! 
