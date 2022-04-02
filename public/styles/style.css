@@ -2,8 +2,51 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
+    color: crimson;
+    font-size: 1.5rem;
+}
+
+.container,
+.nav {
+    width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 1.7rem;
+}
+
+hr {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.logo > a {
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: Avenir , sans-serif;
+}
+
+.logo > a::after {
+    font-size: 1.2rem;
+    font-weight: 500;
+    content: ' ~ 00011193'
+}
+
+.menu > a:hover {
     color: crimson;
 }
