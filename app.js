@@ -15,5 +15,13 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+app.get('/create', (req, res) => {
+    res.render('create')
+})
+
+app.get('/update', (req, res) => {
+    res.render('update')
+})
+
 app.listen(PORT, () => {
     console.log(`Ready on port ${PORT}`) })

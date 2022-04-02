@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+    h2 Update a Task
+
+    if task 
+        form(action=`/update/${ task.id }` method="POST")
+            input.input(type="text" name="taskName" value= task.name)
+            textarea.input(name="taskDesc", cols="30", rows="10")= task.desc
+            button.input.btn Update

@@ -5,9 +5,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-    color: crimson;
+h2 {
+    color: black;
     font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
 }
 
 .container,
@@ -49,4 +51,27 @@ hr {
 
 .menu > a:hover {
     color: crimson;
+}
+
+.input {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 27%;
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    min-width: auto;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: crimson;
+    color: white;
+    border-color: white;
+    
 }
