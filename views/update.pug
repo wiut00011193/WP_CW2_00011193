@@ -5,6 +5,12 @@ block content
 
     if task 
         form(action=`/update/${ task.id }` method="POST")
-            input.input(type="text" name="taskName" value= task.name)
-            textarea.input(name="taskDesc", cols="30", rows="10")= task.desc
+            input.input(type="text" name="taskName" value= task.taskName)
+            textarea.input(name="taskDesc", cols="30", rows="10")= task.taskDesc
+            select.input(name="taskStatus") 
+                each cat in categories 
+                    option(value= cat.id, selected= cat === categories[task.taskStatus])= cat.title
             button.input.btn Update
+
+    if received == 'no'
+        p.error_msg Please fill out all the forms! 

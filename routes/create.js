@@ -7,13 +7,13 @@ const validate = require('../validate')
 const dbPath = path.join(__dirname, '../database/tasks.json')
 
 router.get('/', (req, res) => {
-    res.render('create', { received: req.query.received })
+    res.render('create')
 })
 
 router.post('/', (req, res) => {
     let form = req.body
     if(validate(form) == false){
-        res.redirect('/create?received=no')
+        res.render('create', { received: 'no', form: form})
     } else {
         let data = JSON.parse(fs.readFileSync(dbPath))
         let taskID = data.length >= 1 ? (data[data.length - 1].id + 1) : 0 
@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
             id: taskID,
             taskName: form.taskName,
             taskDesc: form.taskDesc,
-            taskStatus: 'undone'
+            taskStatus: 0
         }
 
         data.push(task)
