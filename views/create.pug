@@ -3,17 +3,18 @@ extends layout.pug
 block content
     h2 Create a Task
 
+    //If some input was already done before the reload with error_msg, then load a form with those inputs
     if form
         form(action="/create" method="POST")
             input.input(type="text" name="taskName" placeholder="Task Name" value= form.taskName)
             textarea.input(name="taskDesc", cols="30", rows="10" placeholder="Task Description")= form.taskDesc
-            button.input.btn Create
+            button.input.input_btn Create
 
     else
         form(action="/create" method="POST")
             input.input(type="text" name="taskName" placeholder="Task Name")
             textarea.input(name="taskDesc", cols="30", rows="10" placeholder="Task Description")
-            button.input.btn Create
+            button.input.input_btn Create
 
     if received == 'no'
         p.error_msg Please fill out all the forms! 

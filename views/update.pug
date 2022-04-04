@@ -3,6 +3,7 @@ extends layout.pug
 block content
     h2 Update a Task
 
+    //Load the form to update
     if task 
         form(action=`/update/${ task.id }` method="POST")
             input.input(type="text" name="taskName" value= task.taskName)
@@ -10,7 +11,7 @@ block content
             select.input(name="taskStatus") 
                 each cat in categories 
                     option(value= cat.id, selected= cat === categories[task.taskStatus])= cat.title
-            button.input.btn Update
+            button.input.input_btn Update
 
     if received == 'no'
         p.error_msg Please fill out all the forms! 

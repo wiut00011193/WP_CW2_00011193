@@ -6,7 +6,7 @@ const fs = require('fs')
 const dbPath = path.join(__dirname, '../database/tasks.json')
 
 router.get('/', (req, res) => {
-    let tasks = JSON.parse(fs.readFileSync(dbPath))
+    let tasks = JSON.parse(fs.readFileSync(dbPath)) //Get all tasks from JSON file
     res.render('index', { tasks: tasks, success_msg: req.query.success_msg, error_msg: req.query.error_msg })
 })
 

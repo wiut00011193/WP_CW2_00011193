@@ -3,7 +3,7 @@ const router = express.Router()
 const path = require('path')
 const fs = require('fs')
 
-const validate = require('../validate')
+const validate = require('../validate') //Function for form validation
 const dbPath = path.join(__dirname, '../database/tasks.json')
 
 router.get('/', (req, res) => {
@@ -15,8 +15,10 @@ router.post('/', (req, res) => {
     if(validate(form) == false){
         res.render('create', { received: 'no', form: form})
     } else {
-        let data = JSON.parse(fs.readFileSync(dbPath))
-        let taskID = data.length >= 1 ? (data[data.length - 1].id + 1) : 0 
+        let tasks = JSON.parse(fs.readFileSync(dbPath)) //Get all tasks from JSON file
+        let taskID = tasks.length >= 1 ? (tasks[tasks.length - 1].id + 1) : 0 //Define id of the new task
+
+        //Create the new task
         let task = {
             id: taskID,
             taskName: form.taskName,
@@ -24,9 +26,10 @@ router.post('/', (req, res) => {
             taskStatus: 0
         }
 
-        data.push(task)
-        fs.writeFileSync(dbPath, JSON.stringify(data))
+        tasks.push(task) //push the new task into json array
+        fs.writeFileSync(dbPath, JSON.stringify(tasks)) //persist the changes into JSON file
 
+        //Go back to the home page
         res.redirect('/?success_msg=created')
     }
 })

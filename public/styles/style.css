@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*Text styling*/
 h2 {
     color: black;
     font-size: 1.5rem;
@@ -12,6 +13,15 @@ h2 {
     margin: 1rem 0;
 }
 
+.error_msg {
+    color: crimson;
+}
+
+.success_msg {
+    color: lightseagreen;
+}
+
+/*Container and nav styling*/
 .container,
 .nav {
     width: 900px;
@@ -37,7 +47,7 @@ h2 {
 
 .nav a {
     text-decoration: none;
-    color: #000;
+    color: black;
     font-size: 1.2rem;
 }
 
@@ -57,46 +67,36 @@ h2 {
     color: crimson;
 }
 
+/*Form inputs styling*/
 .input {
+    display: block;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
     min-height: 27%;
-    display: block;
+    margin-bottom: 1rem;
     padding: 10px;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
 }
 
-.btn {
+.input_btn {
     min-width: auto;
     width: fit-content;
 }
 
-.btn:hover {
+.input_btn:hover {
     background-color: crimson;
     color: white;
     border-color: white;
     
 }
 
-.error_msg {
-    color: crimson;
-}
-
-.success_msg {
-    color: lightseagreen;
-}
-
+/*All tasks display styling*/
 .tasks_list_item_container {
     width: 100%;
     height: 2rem;
     line-height: 2rem;
     text-align: center;
-}
-
-.tasks_list_item_container::after {
-    content: hr;
 }
 
 .tasks_list_item {

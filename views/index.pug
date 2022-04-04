@@ -9,11 +9,13 @@ block content
 
     h2 All Tasks
 
+    //Display each task
     if tasks
         each task in tasks         
             .tasks_list_item_container             
                 p.tasks_list_item.task_name #{ task.taskName }
-                button.tasks_list_item.delete_btn#delete_btn Delete
+                a(href=`delete/${task.id}`)
+                    button(onclick="return confirm('Are you sure you want to delete this task?')").tasks_list_item.delete_btn Delete
                 a(href=`update/${task.id}`)
-                    button.tasks_list_item.edit_btn#edit_btn Edit 
+                    button.tasks_list_item.edit_btn Edit 
             hr
