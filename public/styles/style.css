@@ -5,12 +5,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*Text styling*/
+/* Text styling */
 h2 {
-    color: black;
+    margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 1rem 0;
 }
 
 .error_msg {
@@ -21,7 +20,7 @@ h2 {
     color: lightseagreen;
 }
 
-/*Container and nav styling*/
+/* Container and nav styling */
 .container,
 .nav {
     width: 900px;
@@ -67,7 +66,7 @@ h2 {
     color: crimson;
 }
 
-/*Form inputs styling*/
+/* Form inputs styling */
 .input {
     display: block;
     width: 100%;
@@ -91,7 +90,7 @@ h2 {
     
 }
 
-/*All tasks display styling*/
+/* All tasks display styling */
 .tasks_list_item_container {
     width: 100%;
     height: 2rem;

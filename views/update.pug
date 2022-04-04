@@ -6,8 +6,8 @@ block content
     //Load the form to update
     if task 
         form(action=`/update/${ task.id }` method="POST")
-            input.input(type="text" name="taskName" value= task.taskName)
-            textarea.input(name="taskDesc", cols="30", rows="10")= task.taskDesc
+            input.input(type="text" name="taskName" placeholder="Task Name" value= task.taskName)
+            textarea.input(name="taskDesc", cols="30", rows="10" placeholder="Task Description")= task.taskDesc
             select.input(name="taskStatus") 
                 each cat in categories 
                     option(value= cat.id, selected= cat === categories[task.taskStatus])= cat.title
