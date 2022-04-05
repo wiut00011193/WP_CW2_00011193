@@ -20,6 +20,14 @@ h2 {
     color: lightseagreen;
 }
 
+.coursework_text {
+    max-width: 50%;
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+}
+
 /* Container and nav styling */
 .container,
 .nav {
@@ -103,16 +111,16 @@ h2 {
     height: 100%;
 }
 
-.tasks_list_item.edit_btn,
-.tasks_list_item.delete_btn {
-    float: right;
-    width: 10%;
-    margin-left: 0.1rem;
-}
-
 .tasks_list_item.task_name {
     display: inline-block;
     width: 78.5%;
     text-align: justify;
     overflow: hidden;
+}
+
+.tasks_list_item.edit_btn,
+.tasks_list_item.delete_btn {
+    float: right;
+    width: 10%;
+    margin-left: 0.1rem;
 }

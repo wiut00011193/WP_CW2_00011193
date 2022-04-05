@@ -3,7 +3,7 @@
 This project is created for the purpose of fulfilling requirements of the assessment from Web Development module.
 It is a Task Management web-application that was created using Node JS. This application includes CRUD operations to manage tasks.
 
-Instructions for running this app locally:
+Instructions to run the application locally:
 1. Download the project file from the below given GitHub repository.
 2. Download and install Node JS (v17.8.0 was used for this project).
 3. Open CLI (Command Line Interface) and navigate to the project folder.
