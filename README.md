@@ -13,4 +13,4 @@ Instructions to run the application locally:
 
 GitHub repository: https://github.com/wiut00011193/WP_CW2_00011193
 
-Hosted application: 
+Hosted web-app link: https://carpal-invented-tomato.glitch.me
